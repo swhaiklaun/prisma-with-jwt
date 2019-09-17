@@ -1,0 +1,65 @@
+type User {
+  id: ID! @id
+  email: String! @unique
+  name: String
+  password: String!
+  status: Status! @default(value: Pending)
+  posts: [Post!]!
+  role: Role!
+  addresses: [Address!]!
+}
+
+type Role {
+  id: ID! @id
+  name: String! @unique
+  users: [User!]!
+}
+
+type Supplier {
+  id: ID! @id
+  name: String!
+  user: User!
+  createdAt: DateTime! @createdAt
+  updatedAt: DateTime! @updatedAt
+}
+
+type Customer {
+  id: ID! @id
+  firstName: String!
+  lastName: String!
+  user: User!
+  organizationName: String!
+  customerType: CustomerType! @default(value: OrdinaryPerson)
+}
+
+type Address {
+  id: ID! @id
+  line1: String!
+  line2: String
+  line3: String
+  postalCode: String!
+  phone: String!
+  isDefault: Boolean! @default(value: true)
+  user: User!
+}
+
+type Post {
+  id: ID! @id
+  createdAt: DateTime! @createdAt
+  updatedAt: DateTime! @updatedAt
+  published: Boolean! @default(value: false)
+  title: String!
+  content: String
+  author: User!
+}
+
+enum Status {
+  Pending
+  Active
+  InActive
+}
+
+enum CustomerType {
+  JuristicPerson
+  OrdinaryPerson
+}
