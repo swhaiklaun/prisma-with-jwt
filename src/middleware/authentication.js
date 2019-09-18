@@ -32,6 +32,7 @@ router.post('/', async (req, res) => {
 
   res.json({
     message: 'Authentication done',
-    access_token: accessToken
+    user: user,
+    token: accessToken
   })
 })

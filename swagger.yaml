@@ -1,8 +1,8 @@
 swagger: '2.0'
 info:
-  description: Micerent API Server
+  description: Test API Server
   version: 1.0.0
-  title: Swagger Micerent
+  title: Swagger Test
 host: localhost:4000
 basePath: /v1
 tags:

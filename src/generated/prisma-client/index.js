@@ -13,27 +13,7 @@ var models = [
     embedded: false
   },
   {
-    name: "Supplier",
-    embedded: false
-  },
-  {
-    name: "Customer",
-    embedded: false
-  },
-  {
-    name: "Address",
-    embedded: false
-  },
-  {
-    name: "Post",
-    embedded: false
-  },
-  {
     name: "Status",
-    embedded: false
-  },
-  {
-    name: "CustomerType",
     embedded: false
   }
 ];

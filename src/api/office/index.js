@@ -12,5 +12,5 @@ router.get('/', (req, res) => {
 router.use('/auth', require('../../middleware/authentication'))
 
 // Protected routes
-router.use('/users', verifyAuthenticated, require('./user'))
-router.use('/brands', verifyAuthenticated, require('./brand'))
+// router.use('/users', verifyAuthenticated, require('./user'))
+// router.use('/brands', verifyAuthenticated, require('./brand'))

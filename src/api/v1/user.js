@@ -10,8 +10,9 @@ router.get('/', async (req, res) => {
 })
 
 router.post(`/`, async (req, res) => {
+  console.log(req.body)
   const result = await prisma.createUser({
-    ...req.body
+    ...req.body.user
   })
   res.json(result)
 })

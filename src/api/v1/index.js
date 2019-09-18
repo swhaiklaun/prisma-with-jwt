@@ -12,4 +12,4 @@ router.get('/', (req, res) => {
 router.use('/auth', require('../../middleware/authentication'))
 
 // Protected routes
-// router.use('/users', verifyAuthenticated, require('./user'))
+router.use('/user', verifyAuthenticated, require('./user'))
