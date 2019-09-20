@@ -48,7 +48,7 @@ router.post(`/`, async (req, res) => {
   res.json(result)
 })
 
-router.put('/:id', async (req, res) => {
+router.put('/', async (req, res) => {
   let user = req.body.user
   let obj = await prisma.user({ id: user.id })
   if (!obj)

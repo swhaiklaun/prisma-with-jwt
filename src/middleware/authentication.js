@@ -8,9 +8,6 @@ module.exports = router
 
 router.post('/', async (req, res) => {
   let user = await prisma.user({ email: req.body.email })
-  // let posts = await prisma.posts({ where: { author: { id: user.id } } })
-  // console.log(user)
-  // console.log(posts)
   if (!user) {
     res.json({ message: `No user found for email: ${req.body.email}` })
     return
